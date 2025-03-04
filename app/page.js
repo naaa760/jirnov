@@ -268,6 +268,44 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Partner Logos Marquee Section */}
+        <section className="relative py-8 sm:py-12 md:py-20 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4">
+            {/* Container for better mobile layout */}
+            <div className="relative">
+              {/* Logos marquee container */}
+              <div className="flex gap-x-8 sm:gap-x-12 md:gap-x-16 logos-slide animate-marquee">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <Image
+                    key={num}
+                    src={`/${num}.svg`}
+                    alt={`Partner Logo ${num}`}
+                    width={100}
+                    height={40}
+                    className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    priority
+                  />
+                ))}
+              </div>
+
+              {/* Duplicate for seamless loop */}
+              <div className="flex gap-x-8 sm:gap-x-12 md:gap-x-16 logos-slide animate-marquee2">
+                {[1, 2, 3, 4, 5].map((num) => (
+                  <Image
+                    key={num}
+                    src={`/${num}.svg`}
+                    alt={`Partner Logo ${num}`}
+                    width={100}
+                    height={40}
+                    className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    priority
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Dashboard Preview Section with scroll animation */}
         <section className="container mx-auto py-20 px-4">
           <div className="max-w-6xl mx-auto">

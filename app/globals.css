@@ -241,3 +241,67 @@ body {
     @apply backdrop-blur-sm bg-white/5 border border-white/10;
   }
 }
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 2rem)); /* Adjust for gap */
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(calc(100% + 2rem)); /* Adjust for gap */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logos-slide {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 25s linear infinite;
+}
+
+/* Adjust animation speed based on screen size */
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation: marquee 15s linear infinite; /* Faster on mobile */
+  }
+
+  .animate-marquee2 {
+    animation: marquee2 15s linear infinite; /* Faster on mobile */
+  }
+}
+
+@media (min-width: 641px) {
+  .animate-marquee {
+    animation: marquee 25s linear infinite; /* Slower on desktop */
+  }
+
+  .animate-marquee2 {
+    animation: marquee2 25s linear infinite; /* Slower on desktop */
+  }
+}
+
+/* Optional: Pause on hover for larger screens only */
+@media (min-width: 1024px) {
+  section:hover .animate-marquee,
+  section:hover .animate-marquee2 {
+    animation-play-state: paused;
+  }
+}
