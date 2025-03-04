@@ -167,8 +167,8 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-beige/5 rounded-full blur-xl animate-pulse delay-500" />
         </div>
 
-        {/* Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 pb-32">
+        {/* Hero Section - Reduced sizes */}
+        <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 pb-24">
           {/* Floating Images around the text */}
           <motion.div
             className="absolute -left-24 top-0 w-24 h-24 floating-image"
@@ -221,12 +221,7 @@ export default function Home() {
           {/* Add subtle shine effect behind the title */}
           <div className="absolute -inset-x-20 top-0 -bottom-20 bg-gradient-radial from-beige/20 to-transparent opacity-50 blur-2xl" />
 
-          <h1
-            className={cn(
-              "text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-8 relative",
-              styles.title
-            )}
-          >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
             <span
               className={cn(
                 styles.visible,
@@ -245,7 +240,7 @@ export default function Home() {
               Made Beautiful
             </span>
           </h1>
-          <p className="font-cursive italic text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="font-cursive italic text-lg md:text-xl text-white/90 mb-6 max-w-xl mx-auto">
             "Where vision meets efficiency, and dreams transform into
             deliverables"
           </p>
@@ -262,36 +257,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Partner Logos Marquee Section */}
-        <section className="relative py-32 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4">
-            {/* Container for better mobile layout */}
+        {/* Partner Logos - Reduced sizes */}
+        <section className="relative py-24 overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4">
             <div className="relative">
-              {/* Logos marquee container */}
-              <div className="flex gap-x-8 sm:gap-x-12 md:gap-x-16 logos-slide animate-marquee">
+              <div className="flex gap-x-6 sm:gap-x-8 md:gap-x-12 logos-slide animate-marquee">
                 {[1, 2, 3, 4, 5].map((num) => (
                   <Image
                     key={num}
                     src={`/${num}.svg`}
                     alt={`Partner Logo ${num}`}
-                    width={100}
+                    width={60}
                     height={40}
-                    className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     priority
                   />
                 ))}
               </div>
 
-              {/* Duplicate for seamless loop */}
-              <div className="flex gap-x-8 sm:gap-x-12 md:gap-x-16 logos-slide animate-marquee2">
+              <div className="flex gap-x-6 sm:gap-x-8 md:gap-x-12 logos-slide animate-marquee2">
                 {[1, 2, 3, 4, 5].map((num) => (
                   <Image
                     key={num}
                     src={`/${num}.svg`}
                     alt={`Partner Logo ${num}`}
-                    width={100}
+                    width={60}
                     height={40}
-                    className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] h-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     priority
                   />
                 ))}
@@ -300,8 +292,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Metrics Insights Section */}
-        <section className="relative z-10 py-32">
+        {/* Metrics Insights Section - Reduced sizes */}
+        <section className="relative z-10 py-24">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
@@ -319,18 +311,17 @@ export default function Home() {
               }}
               className="max-w-6xl mx-auto relative z-10"
             >
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-beige/80 bg-clip-text text-transparent">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Metrics Insights
                 </h2>
-                <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                <p className="text-base text-gray-400 max-w-xl mx-auto">
                   Gain deeper understanding and drive strategic decisions with
                   actionable data analytics.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-16 items-center">
-                {/* Left Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -349,7 +340,6 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* Features List */}
                   <div className="space-y-4">
                     {[
                       { icon: "⚡", text: "Reducing errors by 25%" },
@@ -378,7 +368,6 @@ export default function Home() {
                     ))}
                   </div>
 
-                  {/* Metrics */}
                   <div className="grid grid-cols-3 gap-6 pt-4">
                     {[
                       { number: "500+", label: "Downloads" },
@@ -403,9 +392,8 @@ export default function Home() {
                   </div>
                 </motion.div>
 
-                {/* Right Image */}
                 <motion.div
-                  initial={{ opacity: 0, rotateY: 180, scale: 0.8 }} // Start fully rotated and smaller
+                  initial={{ opacity: 0, rotateY: 180, scale: 0.8 }}
                   whileInView={{
                     opacity: 1,
                     rotateY: 0,
@@ -413,21 +401,21 @@ export default function Home() {
                     transition: {
                       type: "spring",
                       duration: 1.5,
-                      bounce: 0.4, // Increased bounce
-                      mass: 1.2, // Added mass for more "weight" to animation
+                      bounce: 0.4,
+                      mass: 1.2,
                     },
                   }}
                   whileHover={{
                     scale: 1.05,
-                    rotateY: 15, // More rotation on hover
-                    rotateX: -5, // Added tilt on hover
+                    rotateY: 15,
+                    rotateX: -5,
                     transition: {
                       duration: 0.4,
                       ease: "easeOut",
                     },
                   }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className="relative perspective-[2000px]" // Increased perspective
+                  className="relative perspective-[2000px]"
                 >
                   <div className="relative preserve-3d">
                     <Image
@@ -440,14 +428,12 @@ export default function Home() {
                       quality={100}
                     />
 
-                    {/* Enhanced shine effect */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-transparent opacity-0"
                       whileHover={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     />
 
-                    {/* Add subtle floating animation */}
                     <motion.div
                       animate={{
                         y: [0, -10, 0],
@@ -468,18 +454,133 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Then your existing Dashboard Preview Section */}
-        <section className="py-32">
+        {/* Client Management Section - Reduced sizes */}
+        <section className="py-24 relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center text-white mb-12">
+            <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-[48px] font-medium leading-tight text-white">
+                  Working with clients
+                  <span className="block">can get messy.</span>
+                  <span className="block">Not with Orchestra.</span>
+                </h2>
+
+                <div className="space-y-5">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-1 flex items-center justify-center rounded-full bg-white/10 text-white text-sm">
+                      1
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-base text-white/90">
+                          A space designed for agencies and their teams
+                        </h3>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="text-white/40"
+                        >
+                          <path
+                            d="M7 17L17 7M17 7H8M17 7V16"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p className="mt-1.5 text-sm text-[#98989A] leading-relaxed">
+                        Offer each customer a dedicated client portal while
+                        managing all clients, team members, and collaborators in
+                        one place. No more switching apps or tabs—boost your
+                        agency's efficiency instantly.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-1 flex items-center justify-center rounded-full bg-white/10 text-white text-sm">
+                      2
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-base text-white/90">
+                        Stay organized and work with tasks
+                      </h3>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="text-white/40"
+                      >
+                        <path
+                          d="M7 17L17 7M17 7H8M17 7V16"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-1 flex items-center justify-center rounded-full bg-white/10 text-white text-sm">
+                      3
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-base text-white/90">
+                        Share knowledge with documents
+                      </h3>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="text-white/40"
+                      >
+                        <path
+                          d="M7 17L17 7M17 7H8M17 7V16"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <Image
+                  src="/dashboard.png"
+                  alt="Orchestra Dashboard"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto rounded-lg"
+                  quality={100}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Dashboard Preview Section - Reduced sizes */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-white mb-10">
                 Empowering your business for tomorrow
               </h2>
               <div
                 ref={ref}
                 className={cn(
                   "rounded-2xl overflow-hidden transition-all duration-700 transform",
-                  "bg-[#1A1A1A]", // Dark background
+                  "bg-[#1A1A1A]",
                   "border border-gray-800",
                   "shadow-[0_0_50px_-12px_rgba(0,0,0,0.3)]",
                   "hover:shadow-[0_0_50px_-6px_rgba(255,255,255,0.1)]",
@@ -489,20 +590,17 @@ export default function Home() {
                     : "opacity-0 translate-y-10"
                 )}
               >
-                <div className="relative w-full h-[600px] rounded-lg overflow-hidden">
-                  {/* Gradient overlay */}
+                <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-blue-500/5" />
 
-                  {/* Dashboard image */}
                   <Image
-                    src="/dash.webp" // Make sure to add your dashboard image
+                    src="/dash.webp"
                     alt="Dashboard Preview"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1280px) 100vw, 1280px"
                   />
 
-                  {/* Corner accents */}
                   <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-gray-700 rounded-tl-2xl" />
                   <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-gray-700 rounded-tr-2xl" />
                   <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-gray-700 rounded-bl-2xl" />
@@ -510,15 +608,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-center text-gray-400 mt-8 max-w-2xl mx-auto">
+              <p className="text-center text-gray-400 mt-6 max-w-xl mx-auto text-sm">
                 No matter what project you're working on, we've got you covered
                 with the best wireframe kits for any platform.
               </p>
             </div>
           </div>
         </section>
-
-        {/* Your existing features section */}
       </div>
     </main>
   );
