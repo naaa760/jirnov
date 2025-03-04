@@ -305,3 +305,31 @@ body {
     animation-play-state: paused;
   }
 }
+
+/* Add these 3D transform utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Optional: Add a floating animation */
+@keyframes float-subtle {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(0);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(2deg);
+  }
+}
+
+.float-subtle {
+  animation: float-subtle 6s ease-in-out infinite;
+}

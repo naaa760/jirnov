@@ -405,21 +405,61 @@ export default function Home() {
 
                 {/* Right Image */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="relative"
+                  initial={{ opacity: 0, rotateY: 180, scale: 0.8 }} // Start fully rotated and smaller
+                  whileInView={{
+                    opacity: 1,
+                    rotateY: 0,
+                    scale: 1,
+                    transition: {
+                      type: "spring",
+                      duration: 1.5,
+                      bounce: 0.4, // Increased bounce
+                      mass: 1.2, // Added mass for more "weight" to animation
+                    },
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    rotateY: 15, // More rotation on hover
+                    rotateX: -5, // Added tilt on hover
+                    transition: {
+                      duration: 0.4,
+                      ease: "easeOut",
+                    },
+                  }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="relative perspective-[2000px]" // Increased perspective
                 >
-                  <div className="relative">
+                  <div className="relative preserve-3d">
                     <Image
                       src="/cl.png"
                       alt="Metrics Dashboard"
                       width={600}
                       height={400}
-                      className="w-full h-auto"
+                      className="w-full h-auto backface-hidden shadow-2xl"
                       priority
                       quality={100}
+                    />
+
+                    {/* Enhanced shine effect */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-transparent opacity-0"
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+
+                    {/* Add subtle floating animation */}
+                    <motion.div
+                      animate={{
+                        y: [0, -10, 0],
+                        rotateX: [0, 2, 0],
+                        rotateY: [0, -2, 0],
+                      }}
+                      transition={{
+                        duration: 6,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                      }}
+                      className="absolute inset-0"
                     />
                   </div>
                 </motion.div>
