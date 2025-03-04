@@ -1,7 +1,7 @@
 {
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/(main)/project/create/page": "app/(main)/project/create/page.js",
+  "/(main)/organization/[orgId]/page": "app/(main)/organization/[orgId]/page.js",
+  "/(main)/onboarding/[[...onboarding]]/page": "app/(main)/onboarding/[[...onboarding]]/page.js",
   "/(main)/project/[projectId]/page": "app/(main)/project/[projectId]/page.js"
 }
