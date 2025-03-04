@@ -43,17 +43,27 @@ export default function Onboarding() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-[#0C0A09] flex justify-center items-start pt-14">
-      {/* Background Effects */}
+      {/* Enhanced Background Effects */}
       <div className="fixed inset-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#1A1614]/90 to-black" />
+        {/* Base gradient with beige tones */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1A1614] via-[#1A1614]/95 to-[#1A1614]" />
 
-        {/* Grainy texture */}
-        <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-soft-light" />
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-[#DEB887]/5 via-transparent to-transparent animate-pulse-slow" />
 
-        {/* Glass-like beige circles */}
-        <div className="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] rounded-full bg-[#DEB887]/[0.02] backdrop-blur-3xl" />
-        <div className="absolute bottom-[-10%] right-[-20%] w-[90vw] h-[90vw] rounded-full bg-[#8B4513]/[0.01] backdrop-blur-2xl" />
+        {/* Enhanced grain effect */}
+        <div className="absolute inset-0 bg-noise opacity-[0.15] mix-blend-overlay" />
+
+        {/* Subtle grain animation */}
+        <div className="absolute inset-0 bg-noise opacity-[0.08] mix-blend-overlay animate-grain" />
+
+        {/* Enhanced glass-like beige circles */}
+        <div className="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] rounded-full bg-[#DEB887]/[0.03] backdrop-blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-[-10%] right-[-20%] w-[90vw] h-[90vw] rounded-full bg-[#8B4513]/[0.02] backdrop-blur-2xl animate-pulse-slow" />
+
+        {/* Additional decorative elements */}
+        <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full bg-[#DEB887]/[0.02] backdrop-blur-xl animate-float" />
+        <div className="absolute bottom-1/3 left-1/3 w-24 h-24 rounded-full bg-[#8B4513]/[0.02] backdrop-blur-xl animate-float-delayed" />
       </div>
 
       {/* Content */}
@@ -80,10 +90,73 @@ export default function Onboarding() {
         </div>
       </div>
 
-      {/* Global Styles */}
+      {/* Updated Global Styles */}
       <style jsx global>{`
         .bg-noise {
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        @keyframes grain {
+          0%,
+          100% {
+            transform: translate(0, 0);
+          }
+          10% {
+            transform: translate(-2%, -2%);
+          }
+          20% {
+            transform: translate(2%, 2%);
+          }
+          30% {
+            transform: translate(-1%, 1%);
+          }
+          40% {
+            transform: translate(1%, -1%);
+          }
+          50% {
+            transform: translate(-2%, 2%);
+          }
+          60% {
+            transform: translate(2%, -2%);
+          }
+          70% {
+            transform: translate(-1%, -1%);
+          }
+          80% {
+            transform: translate(1%, 1%);
+          }
+          90% {
+            transform: translate(-2%, -2%);
+          }
+        }
+
+        .animate-grain {
+          animation: grain 8s steps(10) infinite;
+        }
+
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+        .animate-float {
+          animation: float 15s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+          animation: float 18s ease-in-out infinite;
+          animation-delay: -9s;
+        }
+
+        .animate-pulse-slow {
+          animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
         @keyframes fadeIn {

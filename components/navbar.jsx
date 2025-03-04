@@ -49,7 +49,7 @@ const Navbar = () => {
               href="/"
               className="text-xl font-bold transition-all duration-300 text-white hover:text-beige"
             >
-              ZCRUM
+              JiNoV
             </Link>
 
             {/* Navigation Links - Always white */}

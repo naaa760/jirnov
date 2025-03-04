@@ -27,32 +27,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(main)/layout.js"
     ],
-    "/(main)/project/[projectId]/page": [
+    "/(main)/onboarding/[[...onboarding]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(main)/project/[projectId]/page.css",
-      "static/chunks/app/(main)/project/[projectId]/page.js"
-    ],
-    "/(main)/project/[projectId]/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/project/[projectId]/layout.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/(main)/onboarding/[[...onboarding]]/page.js"
     ],
     "/(main)/organization/[orgId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/(main)/organization/[orgId]/page.css",
       "static/chunks/app/(main)/organization/[orgId]/page.js"
-    ],
-    "/(main)/onboarding/[[...onboarding]]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/onboarding/[[...onboarding]]/page.js"
     ]
   }
 }

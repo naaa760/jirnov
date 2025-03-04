@@ -4,163 +4,119 @@
       "workers": {
         "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/project/create/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/_not-found/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/onboarding/[[...onboarding]]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!"
+        "app/(main)/onboarding/[[...onboarding]]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
         "app/page": "action-browser",
         "app/(main)/project/create/page": "action-browser",
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/_not-found/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser",
-        "app/(main)/onboarding/[[...onboarding]]/page": "action-browser"
+        "app/(main)/onboarding/[[...onboarding]]/page": "action-browser",
+        "app/(main)/organization/[orgId]/page": "action-browser"
       }
     },
     "0efa4f3d50b8cecd4f25e06517909656a44e9e96": {
       "workers": {
         "app/(main)/project/create/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
         "app/(main)/project/create/page": "action-browser",
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "action-browser"
       }
     },
     "71826e044a8a3d7dd9b60f0b8f249306578a0300": {
       "workers": {
         "app/(main)/project/create/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
         "app/(main)/project/create/page": "action-browser",
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "action-browser"
       }
     },
     "e1f8ace6cca793c2d3c9536d98b71f1d562c54d1": {
       "workers": {
         "app/(main)/project/create/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
         "app/(main)/project/create/page": "action-browser",
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser"
-      }
-    },
-    "8f2807bef2e8dbd8d9da08f2f4cc3c2148b0cbfc": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser"
-      }
-    },
-    "d3bfb8e16f16177f3ccf307b03f76e21ac4a963a": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser"
-      }
-    },
-    "070ad3096463ecb4c0ca3eb3802f90b4ed391a3b": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser"
-      }
-    },
-    "7aa733f030d330369b4276292db2b08bd3884ae7": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser"
-      }
-    },
-    "e30ad1252fbc4022f9194caf8396dc3a6fe7e91d": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser"
-      }
-    },
-    "eb08f280382ee013f8414fe0ae69bbf7919df976": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
-        "app/(main)/organization/[orgId]/page": "action-browser"
-      }
-    },
-    "ff5dac8a6d6118ea2f3652c8d18d2ac76cfee2bd": {
-      "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
-        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "action-browser"
       }
     },
     "2358ae3480d80af176b2b1f6273c0ff097225917": {
       "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "rsc"
       }
     },
     "933fbf7ae17a6662180ee51cda711d80914e1f83": {
       "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "rsc"
       }
     },
     "a3e2431e0cfacf51e9d6fa496e2a1db4107b160b": {
       "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "rsc"
       }
     },
     "beb43866f447a4c42a62eb94e3ce2f988995d816": {
       "workers": {
-        "app/(main)/project/[projectId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fsprints.js%22%2C%5B%22createSprint%22%2C%22updateSprintStatus%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!",
         "app/(main)/organization/[orgId]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Forganizations.js%22%2C%5B%22getOrganization%22%2C%22getUserIssues%22%2C%22getProjects%22%2C%22getOrganizationUsers%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/(main)/project/[projectId]/page": "action-browser",
         "app/(main)/organization/[orgId]/page": "rsc"
+      }
+    },
+    "070ad3096463ecb4c0ca3eb3802f90b4ed391a3b": {
+      "workers": {
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(main)/organization/[orgId]/page": "action-browser"
+      }
+    },
+    "7aa733f030d330369b4276292db2b08bd3884ae7": {
+      "workers": {
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(main)/organization/[orgId]/page": "action-browser"
+      }
+    },
+    "e30ad1252fbc4022f9194caf8396dc3a6fe7e91d": {
+      "workers": {
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(main)/organization/[orgId]/page": "action-browser"
+      }
+    },
+    "eb08f280382ee013f8414fe0ae69bbf7919df976": {
+      "workers": {
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(main)/organization/[orgId]/page": "action-browser"
+      }
+    },
+    "ff5dac8a6d6118ea2f3652c8d18d2ac76cfee2bd": {
+      "workers": {
+        "app/(main)/organization/[orgId]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fneha%2Fjirnov%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fprojects.js%22%2C%5B%22createProject%22%2C%22getProject%22%2C%22deleteProject%22%5D%5D%2C%5B%22%2Fhome%2Fneha%2Fjirnov%2Factions%2Fissues.js%22%2C%5B%22createIssue%22%2C%22updateIssueOrder%22%2C%22deleteIssue%22%2C%22getIssuesForSprint%22%2C%22updateIssue%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(main)/organization/[orgId]/page": "action-browser"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "/PQ8+7NMUZapU/aUqT6oLLkgw3HaPMhLXtgg0O16bWs="
+  "encryptionKey": "nqEz7JyrX0HxsNvha8LWQRru7ILbHSuC/YpB2S4vwRw="
 }

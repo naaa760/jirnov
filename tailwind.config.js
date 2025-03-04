@@ -76,10 +76,14 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "pulse-slow": "pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-slow": "pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        grain: "grain 8s steps(10) infinite",
+        float: "float 15s ease-in-out infinite",
+        "float-delayed": "float 18s ease-in-out infinite",
       },
       backgroundImage: {
         noise: "url('/noise.png')",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
   },
