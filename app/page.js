@@ -470,61 +470,35 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, rotateY: 180, scale: 0.8 }}
-                  whileInView={{
-                    opacity: 1,
-                    rotateY: 0,
-                    scale: 1,
-                    transition: {
-                      type: "spring",
-                      duration: 1.5,
-                      bounce: 0.4,
-                      mass: 1.2,
-                    },
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotateY: 15,
-                    rotateX: -5,
-                    transition: {
-                      duration: 0.4,
-                      ease: "easeOut",
-                    },
-                  }}
+                  initial={{ opacity: 0, rotateY: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className="relative perspective-[2000px]"
+                  className="relative perspective-[2000px] w-full"
                 >
-                  <div className="relative preserve-3d">
-                    <Image
-                      src="/cl.png"
-                      alt="Metrics Dashboard"
-                      width={600}
-                      height={400}
-                      className="w-full h-auto backface-hidden shadow-2xl"
-                      priority
-                      quality={100}
-                    />
-
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-transparent opacity-0"
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-
-                    <motion.div
-                      animate={{
-                        y: [0, -10, 0],
-                        rotateX: [0, 2, 0],
-                        rotateY: [0, -2, 0],
-                      }}
-                      transition={{
-                        duration: 6,
-                        ease: "easeInOut",
-                        repeat: Infinity,
-                      }}
-                      className="absolute inset-0"
-                    />
-                  </div>
+                  <motion.div
+                    className="relative preserve-3d w-full flex items-center justify-center"
+                    animate={{
+                      rotateY: 360,
+                    }}
+                    transition={{
+                      duration: 20,
+                      ease: "linear",
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                  >
+                    <div className="w-[90%] md:w-[80%]">
+                      <Image
+                        src="/cl.png"
+                        alt="Metrics Dashboard"
+                        width={600}
+                        height={400}
+                        className="w-full h-auto backface-hidden object-contain"
+                        priority
+                        quality={100}
+                      />
+                    </div>
+                  </motion.div>
                 </motion.div>
               </div>
             </motion.div>
@@ -694,6 +668,161 @@ export default function Home() {
                 with the best wireframe kits for any platform.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Pricing Section with Zig-zag Layout */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Standard Plan - Left Positioned */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative group w-[380px] -rotate-6 ml-4"
+              >
+                <div className="relative p-8 rounded-3xl bg-gradient-to-b from-[#1A1A1A] to-black border border-white/5 overflow-hidden">
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-2xl font-semibold text-white">
+                        STANDARD
+                      </h3>
+                      <div className="px-3 py-1 text-sm text-white/80 rounded-full bg-white/5">
+                        Free • Personal
+                      </div>
+                    </div>
+
+                    <p className="text-gray-400 mb-8">
+                      Ideal for individuals new to Fineva
+                    </p>
+
+                    <ul className="space-y-4 mb-8">
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Limited transaction insights
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Core financial management features
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Basic customer support
+                      </li>
+                    </ul>
+
+                    <button className="w-full py-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors group-hover:bg-white/10">
+                      Get Started
+                      <span className="ml-2">→</span>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Premium Plan - Center and Higher */}
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="relative group w-[380px] mx-auto -mt-12 z-10"
+              >
+                <div className="relative p-8 rounded-3xl bg-gradient-to-b from-[#2A2A2A] to-[#1A1A1A] border border-white/10 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.07] to-transparent" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-2xl font-semibold text-white">
+                        PREMIUM
+                      </h3>
+                      <div className="px-3 py-1 text-sm text-white/80 rounded-full bg-white/10">
+                        $12.99/month • Personal
+                      </div>
+                    </div>
+
+                    <p className="text-gray-400 mb-8">
+                      Perfect for users seeking advanced tools
+                    </p>
+
+                    <ul className="space-y-4 mb-8">
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/30 rounded-full mr-3" />
+                        Enhanced transaction analytics
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/30 rounded-full mr-3" />
+                        Priority customer support
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/30 rounded-full mr-3" />
+                        Access to premium features
+                      </li>
+                    </ul>
+
+                    <button className="w-full py-3 rounded-full bg-white text-black hover:bg-white/90 transition-colors">
+                      Get Started
+                      <span className="ml-2">→</span>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Enterprise Plan - Right Positioned */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="relative group w-[380px] rotate-6 ml-auto -mt-12"
+              >
+                <div className="relative p-8 rounded-3xl bg-gradient-to-b from-[#242424] to-[#1A1A1A] border border-white/5 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent" />
+
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-2xl font-semibold text-white">
+                        ENTERPRISE
+                      </h3>
+                      <div className="px-3 py-1 text-sm text-white/80 rounded-full bg-white/5">
+                        $24.99/month • Business
+                      </div>
+                    </div>
+
+                    <p className="text-gray-400 mb-8">
+                      Tailored for small businesses and enterprises
+                    </p>
+
+                    <ul className="space-y-4 mb-8">
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Comprehensive financial insights
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Dedicated account manager
+                      </li>
+                      <li className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-white/20 rounded-full mr-3" />
+                        Multi-user access
+                      </li>
+                    </ul>
+
+                    <button className="w-full py-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors group-hover:bg-white/10">
+                      Get Started
+                      <span className="ml-2">→</span>
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Add decorative elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/4 left-0 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-transparent rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl" />
           </div>
         </section>
       </div>

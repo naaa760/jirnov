@@ -372,3 +372,53 @@ body {
     opacity: 0;
   }
 }
+
+/* Enhanced pricing card effects */
+.pricing-card-container {
+  perspective: 1000px;
+}
+
+.pricing-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.pricing-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  z-index: 20;
+}
+
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
+}
+
+/* Add or update the 3D transform utilities */
+.perspective-2000 {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  transform: translateZ(1px); /* Prevents flickering */
+}
