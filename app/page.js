@@ -89,19 +89,17 @@ export default function Home() {
 
   const { scrollYProgress } = useScroll();
 
-  // Create transform values for floating images with enhanced downward animation
   const floatingImageProps = {
     initial: { opacity: 1, scale: 1, y: 0 },
     style: {
       opacity: useTransform(scrollYProgress, [0, 0.3], [1, 0]),
       scale: useTransform(scrollYProgress, [0, 0.3], [1, 0.95]),
-      y: useTransform(scrollYProgress, [0, 0.3], [0, 300]), // Increased downward movement
+      y: useTransform(scrollYProgress, [0, 0.3], [0, 300]),
       transition: { duration: 3, ease: "easeOut" },
       willChange: "transform, opacity",
     },
   };
 
-  // Different timing and movement for each image
   const imageVariants = {
     first: {
       ...floatingImageProps,
@@ -139,27 +137,22 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">
-      {/* Add this right after the main opening tag to create a global background effect */}
       <div className="absolute inset-0 bg-gradient-radial from-[#1A1614] via-black to-black" />
       <div className="absolute inset-0">
         <div className="absolute top-0 left-[20%] w-[800px] h-[800px] bg-gradient-radial from-[#DEB887]/5 to-transparent rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute bottom-40 right-[10%] w-[600px] h-[600px] bg-gradient-radial from-[#8B4513]/5 to-transparent rounded-full blur-[100px] animate-pulse-slow delay-700" />
       </div>
 
-      {/* Content wrapper - Remove the blur effect */}
       <div className="relative z-10">
         <Navbar className="text-white" />
 
-        {/* Also update these background effects to be less blurry */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-[#1A1614] to-black" />
 
-          {/* Reduce blur radius on accent circles */}
           <div className="absolute top-20 left-[20%] w-[600px] h-[600px] bg-gradient-radial from-[#DEB887]/10 to-transparent rounded-full blur-[60px] animate-pulse-slow" />
           <div className="absolute bottom-40 right-[10%] w-[700px] h-[700px] bg-gradient-radial from-[#D2B48C]/10 to-transparent rounded-full blur-[80px] animate-pulse-slow delay-700" />
           <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-gradient-radial from-[#BC8F8F]/8 to-transparent rounded-full blur-[40px] animate-float" />
 
-          {/* Keep light beams and grain texture as they are */}
           <div className="absolute inset-0">
             <div className="light-beam-1" />
             <div className="light-beam-2" />
@@ -167,16 +160,13 @@ export default function Home() {
           <div className="absolute inset-0 opacity-20 mix-blend-overlay bg-noise" />
         </div>
 
-        {/* Update hero section glowing effects to be less blurry */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-xl animate-pulse" />
           <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-xl animate-pulse delay-1000" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-beige/5 rounded-full blur-xl animate-pulse delay-500" />
         </div>
 
-        {/* Hero Section - Reduced sizes */}
         <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 pb-24">
-          {/* Sparkle/Star Effect Layer */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_, i) => (
               <motion.div
@@ -207,7 +197,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Static Stars Background */}
           <div className="absolute inset-0">
             {[...Array(50)].map((_, i) => (
               <div
@@ -223,7 +212,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Shooting Stars */}
           <div className="absolute inset-0">
             {[...Array(5)].map((_, i) => (
               <motion.div
@@ -253,7 +241,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Floating Images around the text */}
           <motion.div
             className="absolute -left-24 top-0 w-24 h-24 floating-image"
             {...imageVariants.first}
@@ -302,7 +289,6 @@ export default function Home() {
             />
           </motion.div>
 
-          {/* Add subtle shine effect behind the title */}
           <div className="absolute -inset-x-20 top-0 -bottom-20 bg-gradient-radial from-beige/20 to-transparent opacity-50 blur-2xl" />
 
           <h1 className="text-center space-y-2">
@@ -312,7 +298,7 @@ export default function Home() {
                 "block text-[42px] sm:text-[52px] md:text-[64px] font-medium leading-[1.1] bg-gradient-to-r from-[#8B4513] via-[#A0522D] to-[#CD853F] bg-clip-text text-transparent relative z-10"
               )}
             >
-              Screen Recordings
+              JINova
             </span>
             <span
               className={cn(
@@ -320,7 +306,7 @@ export default function Home() {
                 "block text-[42px] sm:text-[52px] md:text-[64px] font-medium leading-[1.1] bg-gradient-to-r from-[#DEB887] via-[#F5DEB3] to-[#FFDEAD] bg-clip-text text-transparent relative z-10"
               )}
             >
-              Made Beautiful
+              ProjECT MangeMeNT
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-[#DEB887]/80 max-w-2xl mx-auto mt-8 mb-12 italic text-center">
@@ -341,7 +327,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Partner Logos - Reduced sizes */}
         <section className="relative py-24 overflow-hidden">
           <div className="max-w-6xl mx-auto px-4">
             <div className="relative">
@@ -376,7 +361,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Metrics Insights Section - Reduced sizes */}
         <section className="relative z-10 py-24">
           <div className="container mx-auto px-4">
             <motion.div
