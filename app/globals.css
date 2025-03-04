@@ -248,13 +248,13 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% - 2rem)); /* Adjust for gap */
+    transform: translateX(calc(-100% - 2rem));
   }
 }
 
 @keyframes marquee2 {
   0% {
-    transform: translateX(calc(100% + 2rem)); /* Adjust for gap */
+    transform: translateX(calc(100% + 2rem));
   }
   100% {
     transform: translateX(0);
