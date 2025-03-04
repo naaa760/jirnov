@@ -1,0 +1,81 @@
+.title {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.accentText {
+  position: relative;
+  display: inline-block;
+}
+
+.accentText::after {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: -0.1em;
+  right: -0.1em;
+  height: 0.3em;
+  background-color: rgba(245, 245, 220, 0.05);
+  z-index: -1;
+  transform: skew(-12deg);
+}
+
+.visible {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.accentText {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add subtle gradient animation to background */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add shimmer effect */
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(245, 245, 220, 0.1),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
