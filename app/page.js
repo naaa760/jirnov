@@ -139,9 +139,16 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black relative overflow-hidden">
+      {/* Add this right after the main opening tag to create a global background effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-[#1A1614] via-black to-black" />
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-[20%] w-[800px] h-[800px] bg-gradient-radial from-[#DEB887]/5 to-transparent rounded-full blur-[120px] animate-pulse-slow" />
+        <div className="absolute bottom-40 right-[10%] w-[600px] h-[600px] bg-gradient-radial from-[#8B4513]/5 to-transparent rounded-full blur-[100px] animate-pulse-slow delay-700" />
+      </div>
+
       {/* Content wrapper - Remove the blur effect */}
       <div className="relative z-10">
-        <Navbar />
+        <Navbar className="text-white" />
 
         {/* Also update these background effects to be less blurry */}
         <div className="absolute inset-0 z-0">
@@ -298,26 +305,25 @@ export default function Home() {
           {/* Add subtle shine effect behind the title */}
           <div className="absolute -inset-x-20 top-0 -bottom-20 bg-gradient-radial from-beige/20 to-transparent opacity-50 blur-2xl" />
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+          <h1 className="text-center space-y-2">
             <span
               className={cn(
                 styles.visible,
-                "bg-clip-text text-transparent bg-gradient-to-r from-[#5C4033] via-[#8B4513] to-[#A0522D] relative z-10"
+                "block text-[42px] sm:text-[52px] md:text-[64px] font-medium leading-[1.1] bg-gradient-to-r from-[#8B4513] via-[#A0522D] to-[#CD853F] bg-clip-text text-transparent relative z-10"
               )}
             >
               Screen Recordings
             </span>
-            <br />
             <span
               className={cn(
                 styles.accentText,
-                "bg-clip-text text-transparent bg-gradient-to-r from-[#DEB887] to-[#F5DEB3] relative z-10"
+                "block text-[42px] sm:text-[52px] md:text-[64px] font-medium leading-[1.1] bg-gradient-to-r from-[#DEB887] via-[#F5DEB3] to-[#FFDEAD] bg-clip-text text-transparent relative z-10"
               )}
             >
               Made Beautiful
             </span>
           </h1>
-          <p className="font-cursive italic text-lg md:text-xl text-white/90 mb-6 max-w-xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#DEB887]/80 max-w-2xl mx-auto mt-8 mb-12 italic text-center">
             "Where vision meets efficiency, and dreams transform into
             deliverables"
           </p>
@@ -328,6 +334,7 @@ export default function Home() {
               variant="outline"
               className="rounded-full px-8 py-6 border-beige/20 text-beige hover:bg-beige/10 font-medium flex items-center gap-2"
             >
+              m
               <ArrowRight className="w-5 h-5" />
               Signup — It's Free
             </Button>
@@ -428,20 +435,17 @@ export default function Home() {
                       },
                       { icon: "✨", text: "...And more" },
                     ].map((feature, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}
-                        className="flex items-center gap-4 group"
+                        className="flex items-start gap-4 group border-gradient-beige rounded-xl p-4 hover:bg-gradient-beige-subtle transition-all duration-300"
                       >
-                        <span className="w-10 h-10 flex items-center justify-center rounded-xl bg-beige/5 border border-beige/10 group-hover:bg-beige/10 transition-colors">
-                          {feature.icon}
-                        </span>
+                        <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-b from-[#DEB887] to-[#8B4513] bg-opacity-10 flex items-center justify-center glow-beige-hover">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#DEB887] to-[#8B4513]" />
+                        </div>
                         <span className="text-gray-300 group-hover:text-beige transition-colors">
                           {feature.text}
                         </span>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -823,6 +827,176 @@ export default function Home() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-1/4 left-0 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-transparent rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl" />
+          </div>
+        </section>
+
+        {/* Schedule Demo Section */}
+        <section className="py-24 relative overflow-hidden">
+          {/* Background gradients */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#1A1614] to-black/90" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#DEB887]/5 via-transparent to-[#8B4513]/5" />
+
+            {/* Animated gradient orbs */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-[#DEB887]/10 to-transparent rounded-full blur-[80px] animate-pulse-slow" />
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-radial from-[#8B4513]/10 to-transparent rounded-full blur-[80px] animate-pulse-slow delay-700" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-[#DEB887]/5 to-transparent rounded-full blur-[100px] animate-pulse-slow delay-300" />
+          </div>
+
+          {/* Content container with enhanced backdrop */}
+          <div className="container mx-auto px-4 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent backdrop-blur-[2px]" />
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start relative">
+              {/* Left Content */}
+              <div className="space-y-8">
+                <h2 className="text-[48px] font-medium leading-tight text-white">
+                  Schedule demo
+                </h2>
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  We're here to assist you every step of the way. Whether you
+                  have questions, feedback, or are interested in collaborating,
+                  don't hesitate to reach out.
+                </p>
+
+                {/* Updated Feature Points */}
+                <div className="space-y-5">
+                  {[
+                    {
+                      title: "Connect all your tools in one place",
+                      description:
+                        "Seamlessly integrate with your existing workflow",
+                    },
+                    {
+                      title: "Stay ahead with cutting-edge features",
+                      description:
+                        "Access the latest innovations in project management",
+                    },
+                    {
+                      title: "Tailor our platform to your needs",
+                      description:
+                        "Customize your workspace exactly how you want it",
+                    },
+                    {
+                      title: "24/7 Support: Always here to help",
+                      description: "Get assistance whenever you need it",
+                    },
+                    {
+                      title: "And much more to explore",
+                      description:
+                        "Discover all the powerful features we offer",
+                    },
+                  ].map((feature, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 group border-gradient-beige rounded-xl p-4 hover:bg-gradient-beige-subtle transition-all duration-300"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-b from-[#DEB887] to-[#8B4513] bg-opacity-10 flex items-center justify-center glow-beige-hover">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#DEB887] to-[#8B4513]" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-medium text-white/90 group-hover:text-[#DEB887] transition-colors">
+                          {feature.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Form - Updated styling with adjusted width and matching pricing card style */}
+              <div className="relative group max-w-lg mx-auto lg:ml-auto">
+                {/* Background gradient effects - Updated to match pricing cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#2A2A2A] to-[#1A1A1A] rounded-2xl backdrop-blur-md" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/[0.07] to-transparent rounded-2xl border border-white/10" />
+
+                {/* Glow effects - Updated to match pricing cards */}
+                <div className="absolute -inset-0.5 bg-gradient-to-b from-[#DEB887]/20 to-[#8B4513]/20 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Form content */}
+                <div className="relative p-7 rounded-2xl">
+                  <form className="space-y-4">
+                    <div>
+                      <label className="block text-sm text-white/80 mb-1.5">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-gradient-beige-subtle border-gradient-beige focus:glow-beige transition-all duration-300"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-white/80 mb-1.5">
+                        First name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter your first name"
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-gradient-beige-subtle border-gradient-beige focus:glow-beige transition-all duration-300"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-white/80 mb-1.5">
+                        Last name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter your last name"
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-gradient-beige-subtle border-gradient-beige focus:glow-beige transition-all duration-300"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-white/80 mb-1.5">
+                        Phone number
+                      </label>
+                      <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-gradient-beige-subtle border-gradient-beige focus:glow-beige transition-all duration-300"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm text-white/80 mb-1.5">
+                        Message
+                      </label>
+                      <textarea
+                        placeholder="Enter your message"
+                        rows={3}
+                        className="w-full px-3 py-2 text-sm rounded-lg bg-gradient-beige-subtle border-gradient-beige focus:glow-beige transition-all duration-300 resize-none"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-beige hover:opacity-90 transition-all duration-300 glow-beige-hover"
+                    >
+                      Send
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M1 8h14M9 2l6 6-6 6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

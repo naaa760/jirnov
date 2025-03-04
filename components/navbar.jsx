@@ -35,7 +35,7 @@ const Navbar = () => {
       <nav
         className={`mx-auto max-w-7xl rounded-full transition-all duration-300 border relative overflow-hidden ${
           scrolled
-            ? "bg-black/70 backdrop-blur-sm border-beige/20 shadow-[0_0_15px_rgba(245,245,220,0.07)]"
+            ? "bg-black/30 backdrop-blur-[2px] border-beige/10 shadow-[0_0_15px_rgba(245,245,220,0.05)]"
             : "bg-transparent border-transparent"
         }`}
       >
@@ -44,27 +44,21 @@ const Navbar = () => {
 
         <div className="px-6 relative">
           <div className="flex items-center justify-between h-14">
-            {/* Logo/Brand with gradient */}
+            {/* Logo/Brand - Always white */}
             <Link
               href="/"
-              className={`text-xl font-bold transition-all duration-300 ${
-                scrolled
-                  ? "bg-gradient-to-r from-[#DEB887] to-[#D2B48C] bg-clip-text text-transparent"
-                  : "text-white hover:text-beige"
-              }`}
+              className="text-xl font-bold transition-all duration-300 text-white hover:text-beige"
             >
               ZCRUM
             </Link>
 
-            {/* Navigation Links with underline effect */}
+            {/* Navigation Links - Always white */}
             <div className="hidden md:flex items-center space-x-8">
               {["Features", "Pricing", "About"].map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
-                  className={`transition-all duration-300 hover:text-beige relative group ${
-                    scrolled ? "text-beige/80" : "text-white"
-                  }`}
+                  className="transition-all duration-300 hover:text-beige relative group text-white"
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-[#DEB887] to-[#D2B48C] group-hover:w-full transition-all duration-300" />
@@ -72,7 +66,7 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Auth Buttons with enhanced gradients */}
+            {/* Auth Buttons */}
             <div className="flex items-center gap-4">
               {!isLoaded ? (
                 <Loader2 className="h-8 w-8 animate-spin text-beige" />
@@ -82,11 +76,7 @@ const Navbar = () => {
                     <Link href="/project/create">
                       <Button
                         variant="destructive"
-                        className={`flex items-center gap-2 rounded-full transition-all duration-300 ${
-                          scrolled
-                            ? "bg-gradient-to-r from-[#DEB887] to-[#D2B48C] text-black hover:opacity-90"
-                            : "bg-white text-black hover:bg-white/90"
-                        }`}
+                        className="flex items-center gap-2 rounded-full transition-all duration-300 bg-white text-black hover:bg-white/90"
                       >
                         <PenBox size={18} />
                         <span className="hidden md:inline">Create Project</span>
@@ -98,11 +88,7 @@ const Navbar = () => {
                     <SignInButton forceRedirectUrl="/onboarding">
                       <Button
                         variant="outline"
-                        className={`rounded-full transition-all duration-300 relative group overflow-hidden ${
-                          scrolled
-                            ? "border-beige/30 text-beige hover:border-beige/50"
-                            : "border-white/30 text-white hover:border-white/50"
-                        }`}
+                        className="rounded-full transition-all duration-300 relative group overflow-hidden border-white/30 text-white hover:border-white/50"
                       >
                         <span className="relative z-10">Login</span>
                         <span className="absolute inset-0 bg-gradient-to-r from-[#DEB887]/10 to-[#D2B48C]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -113,13 +99,9 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Mobile Menu Button with gradient hover */}
+            {/* Mobile Menu Button - Always white */}
             <div className="md:hidden">
-              <button
-                className={`p-2 transition-all duration-300 rounded-full hover:bg-gradient-to-r hover:from-[#DEB887]/10 hover:to-[#D2B48C]/10 ${
-                  scrolled ? "text-beige" : "text-white"
-                }`}
-              >
+              <button className="p-2 transition-all duration-300 rounded-full hover:bg-gradient-to-r hover:from-[#DEB887]/10 hover:to-[#D2B48C]/10 text-white">
                 <svg
                   className="h-6 w-6"
                   fill="none"
