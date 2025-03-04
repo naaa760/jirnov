@@ -169,6 +169,83 @@ export default function Home() {
 
         {/* Hero Section - Reduced sizes */}
         <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 pb-24">
+          {/* Sparkle/Star Effect Layer */}
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-white rounded-full"
+                initial={{
+                  opacity: 0.1,
+                  scale: 0.5,
+                  x: Math.random() * window?.innerWidth || 1000,
+                  y: Math.random() * window?.innerHeight || 1000,
+                }}
+                animate={{
+                  opacity: [0.1, 0.8, 0.1],
+                  scale: [0.5, 1, 0.5],
+                  y: [null, "-20vh"],
+                }}
+                transition={{
+                  duration: Math.random() * 3 + 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: Math.random() * 2,
+                }}
+                style={{
+                  filter: "blur(0.5px)",
+                  boxShadow: "0 0 4px 1px rgba(255,255,255,0.4)",
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Static Stars Background */}
+          <div className="absolute inset-0">
+            {[...Array(50)].map((_, i) => (
+              <div
+                key={i}
+                className="star"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  "--duration": `${Math.random() * 3 + 2}s`,
+                  "--delay": `${Math.random() * 2}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Shooting Stars */}
+          <div className="absolute inset-0">
+            {[...Array(5)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute h-px bg-gradient-to-r from-transparent via-white to-transparent"
+                style={{
+                  width: "100px",
+                  transform: "rotate(-45deg)",
+                }}
+                initial={{
+                  x: "-100%",
+                  y: Math.random() * 500,
+                  opacity: 0,
+                }}
+                animate={{
+                  x: "200%",
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: Math.random() * 10 + 5,
+                  ease: "linear",
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
+          </div>
+
           {/* Floating Images around the text */}
           <motion.div
             className="absolute -left-24 top-0 w-24 h-24 floating-image"
@@ -457,8 +534,8 @@ export default function Home() {
         {/* Client Management Section - Reduced sizes */}
         <section className="py-24 relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6 lg:max-w-[90%]">
                 <h2 className="text-[48px] font-medium leading-tight text-white">
                   Working with clients
                   <span className="block">can get messy.</span>
@@ -554,16 +631,20 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative">
-                <Image
-                  src="/dashboard.png"
-                  alt="Orchestra Dashboard"
-                  width={800}
-                  height={500}
-                  className="w-full h-auto rounded-lg"
-                  quality={100}
-                  priority
-                />
+              <div className="relative lg:-right-12 xl:-right-24">
+                <div className="relative w-[120%]">
+                  <Image
+                    src="/dashboard.png"
+                    alt="Orchestra Dashboard"
+                    width={1000}
+                    height={625}
+                    className="w-full h-auto rounded-lg"
+                    quality={100}
+                    priority
+                  />
+
+                  <div className="absolute inset-0 rounded-lg shadow-[0_0_50px_-12px_rgba(0,0,0,0.3)]" />
+                </div>
               </div>
             </div>
           </div>

@@ -333,3 +333,42 @@ body {
 .float-subtle {
   animation: float-subtle 6s ease-in-out infinite;
 }
+
+/* Star effect utilities */
+.star-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.star-layer {
+  will-change: transform;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateZ(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateZ(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(-100%) translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) translateY(200%) rotate(-45deg);
+    opacity: 0;
+  }
+}
