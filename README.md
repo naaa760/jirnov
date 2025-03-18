@@ -1,18 +1,33 @@
-# Full Stack Jira Clone with Next JS, React, Tailwind CSS, Prisma, Neon, Clerk, Shadcn UI Tutorial 🔥🔥
-## https://www.youtube.com/watch?v=R5dBYINNouY
+## Project Overview
 
-![image](https://github.com/user-attachments/assets/783d4f3b-925d-44cf-aaf8-4ee4035b2f6c)
+JiNoV is an elegant project management platform designed to bridge the gap between planning and execution. Born from the frustration of juggling multiple tools that were either too complex or too simplistic, JiNoV combines the best aspects of agile methodologies with an intuitive interface, creating a seamless experience for teams of all sizes.
 
-### Make sure to create a `.env` file with following variables -
+## Problem Addressed
 
-```
-DATABASE_URL=
+Traditional project management tools often create silos between planning and execution. JiNoV bridges this gap by providing a unified workspace where planning, tracking, and collaboration happen in real-time. Our platform eliminates the disconnect between strategy and implementation, ensuring projects stay on track from conception to completion.
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+## Target Audience
 
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
-```
+JiNoV is designed for cross-functional teams that value both structure and flexibility. From startups to enterprise organizations, our platform serves product managers, developers, designers, and stakeholders who need visibility into project progress without drowning in complexity. It's particularly valuable for remote and hybrid teams seeking to maintain alignment across time zones.
+
+## Key Features
+
+- **Sprint Management**: Create, track, and manage sprints with intuitive controls
+- **Kanban Board**: Visualize workflow with a beautiful drag-and-drop interface
+- **Issue Tracking**: Create and manage issues with rich formatting
+- **Team Collaboration**: Assign tasks and track progress across team members
+- **Organization Management**: Manage multiple projects across organizations
+- **Real-time Updates**: See changes instantly across the platform
+- **Responsive Design**: Beautiful experience on any device
+- **Dark Mode**: Elegant dark theme with beige accents
+
+## Technology Stack
+
+- **Frontend**: Next.js 14, React, Tailwind CSS
+- **Authentication**: Clerk
+- **Database**: PostgreSQL with Prisma ORM
+- **Styling**: Tailwind CSS, Shadcn UI components
+- **Drag and Drop**: Hello Pangea DnD
+- **Form Handling**: React Hook Form with Zod validation
+- **Date Handling**: date-fns
+- **Notifications**: Sonner toast notifications
