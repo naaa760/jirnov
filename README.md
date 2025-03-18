@@ -1,4 +1,10 @@
-## Project Overview
+## Project Overview✨
+
+![image](https://github.com/user-attachments/assets/7d4cca80-b2f5-40f4-9aba-e3344aca1d38)
+
+![image](https://github.com/user-attachments/assets/5218ed69-6146-4d69-a29f-4ba91efd0d88)
+
+
 
 JiNoV is an elegant project management platform designed to bridge the gap between planning and execution. Born from the frustration of juggling multiple tools that were either too complex or too simplistic, JiNoV combines the best aspects of agile methodologies with an intuitive interface, creating a seamless experience for teams of all sizes.
 
